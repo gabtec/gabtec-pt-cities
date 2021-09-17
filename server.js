@@ -22,10 +22,14 @@ app.use(express.json());
 // router handler modules
 const DistritosEndpoints = require("./api/distritos/distritos.routes");
 const ConcelhosEndpoints = require("./api/concelhos/concelhos.routes");
+const LocalidadesEndpoints = require("./api/localidades/localidades.routes");
+const CodigosPostaisEndpoints = require("./api/codigos-postais/cod-postais.routes");
 
 // ROUTES
 app.use("/api/v1/distritos", DistritosEndpoints);
 app.use("/api/v1/concelhos", ConcelhosEndpoints);
+app.use("/api/v1/localidades", LocalidadesEndpoints);
+app.use("/api/v1/codigos-postais", CodigosPostaisEndpoints);
 
 // app.listen(PORT, function () {
 //   console.log(`Simple Server listening on port ${PORT}.`);

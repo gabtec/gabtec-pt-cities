@@ -34,6 +34,12 @@ GET /api/v1/concelhos?distrito=Lisboa
 GET /api/v1/concelhos/:cod  
  **devolve** O nome do concelho
 
+GET /api/v1/localidades/:codPostal  
+ **devolve** O nome da localidade associada ao código postal
+
+GET /api/v1/codigos-postais/:localidade  
+ **devolve** Um array com todos os códigos postais da localidade indicada
+
 # Author
 
 Gabriel Martins aka Gabtec
