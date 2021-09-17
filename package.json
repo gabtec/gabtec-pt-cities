@@ -1,0 +1,27 @@
+{
+  "name": "gabtec-pt-cities",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "mocha tests/unit/**/*.spec.js && exit 1",
+    "test-i": "NODE_ENV=test mocha ./tests/integration/**/*.spec.js --exit"
+  },
+  "author": "Gabriel Martins",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0"
+  },
+  "repository": {
+    "url": "https://github.com/gabtec/gabtec-pt-cities"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.1",
+    "nodemon": "^2.0.12",
+    "supertest": "^6.1.6"
+  }
+}
