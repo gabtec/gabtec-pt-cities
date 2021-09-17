@@ -22,7 +22,7 @@ describe("getLocalidadePorCodPostal()", () => {
   });
 
   it("should return 200", (done) => {
-    const zipCode = "3100-462";
+    const zipCode = "3240-477";
 
     request(api)
       .get(`/api/v1/localidades/${zipCode}`)
@@ -31,7 +31,9 @@ describe("getLocalidadePorCodPostal()", () => {
       .end(function (err, res) {
         if (err) return done(err);
 
-        expect(res.body).to.be.equal("POMBAL");
+        expect(res.body.length).to.be.eq(2);
+        expect(res.body[0].localidade).to.be.eq("Furadouro");
+        expect(res.body[1].localidade).to.be.eq("Cerca");
 
         return done();
       });

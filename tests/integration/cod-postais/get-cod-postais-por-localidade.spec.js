@@ -29,7 +29,7 @@ describe("getCodPostaisPorLocalidade()", () => {
       .expect(200)
       .end(function (err, res) {
         if (err) return done(err);
-        console.log(res.body);
+
         expect(res.body).to.be.instanceOf(Array);
         expect(res.body.length).to.be.eq(275);
 

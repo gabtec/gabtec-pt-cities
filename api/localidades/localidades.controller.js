@@ -1,4 +1,4 @@
-const codPostais = require("../codigos-postais/cod-postais.data.json");
+const codPostais = require("../codigos-postais/cod-postais.data_v3.json");
 
 module.exports = {
   getLocalidadePorCodPostal,
@@ -16,5 +16,13 @@ function getLocalidadePorCodPostal(req, res, next) {
       .json({ message: "Código Postal deve respeitar o padrão NNNN-NNN." });
   }
 
-  return res.status(200).json(codPostais[cod]);
+  const result = [];
+
+  for (const key in codPostais) {
+    // console.log(key);
+    if (key.substring(0, 8) === cod) {
+      result.push(codPostais[key]);
+    }
+  }
+  return res.status(200).json(result);
 }
