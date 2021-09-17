@@ -11,6 +11,9 @@ Assim optou-se por esta api, que está pensada para ser usada como uma sub-api (
 
 ## Modo de uso
 
+É disponibilizada como um express middleware.  
+[TODO] Pretendo disponibilizar também como um microserviço, num docker container.
+
 ```bash
 $ npm install gabtec-pt-cities
 ```
@@ -35,7 +38,8 @@ GET /api/v1/concelhos/:cod
  **devolve** O nome do concelho
 
 GET /api/v1/localidades/:codPostal  
- **devolve** O nome da localidade associada ao código postal
+ **param** O código postal, tem de estar no formado NNNN-NNN
+**devolve** O nome da localidade associada ao código postal
 
 GET /api/v1/codigos-postais/:localidade  
  **devolve** Um array com todos os códigos postais da localidade indicada
