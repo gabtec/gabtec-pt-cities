@@ -27,6 +27,6 @@ const ConcelhosEndpoints = require("./api/concelhos/concelhos.routes");
 app.use("/api/v1/distritos", DistritosEndpoints);
 app.use("/api/v1/concelhos", ConcelhosEndpoints);
 
-app.listen(PORT, function () {
-  console.log(`Simple Server listening on port ${PORT}.`);
-});
+// app.listen(PORT, function () {
+//   console.log(`Simple Server listening on port ${PORT}.`);
+// });
